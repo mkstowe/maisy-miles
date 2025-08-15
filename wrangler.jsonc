@@ -1,7 +1,7 @@
 {
-  "name": "worker-name",
+  "name": "maisy-miles",
   "compatibility_date": "2025-08-15",
   "assets": {
-    "directory": "./dist/maisy-miles"
+    "directory": "./dist/maisy-miles/browser"
   }
 }
