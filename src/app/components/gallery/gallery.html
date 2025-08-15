@@ -1,0 +1,96 @@
+@if (items.length) {
+<section
+  class="relative w-full max-w-[560px]"
+  [attr.aria-label]="ariaLabel"
+  role="region"
+  aria-roledescription="carousel"
+  aria-live="off"
+  tabindex="0"
+  (mouseenter)="pause()"
+  (mouseleave)="resume()"
+  (touchstart)="onTouchStart($event)"
+  (touchend)="onTouchEnd($event)"
+>
+  <div class="relative aspect-square overflow-hidden rounded-4xl">
+    <!-- SLIDING TRACK for shift transition -->
+    <div
+      class="flex h-full"
+      [class.transition-transform]="isAnimating"
+      [style.transform]="'translateX(' + translateX + '%)'"
+      (transitionend)="onTransitionEnd()"
+    >
+      <!-- leading clone (last slide) -->
+      <img
+        class="block h-full w-full shrink-0 grow-0 basis-full object-cover"
+        [src]="items[items.length - 1].src"
+        [alt]="items[items.length - 1].alt || ''"
+        loading="lazy"
+        decoding="async"
+      />
+
+      <!-- real slides -->
+      @for (it of items; track it) {
+      <img
+        class="block h-full w-full shrink-0 grow-0 basis-full object-cover"
+        [src]="it.src"
+        [alt]="it.alt"
+        loading="lazy"
+        decoding="async"
+      />
+      }
+
+      <!-- trailing clone (first slide) -->
+      <img
+        class="block h-full w-full shrink-0 grow-0 basis-full object-cover"
+        [src]="items[0].src"
+        [alt]="items[0].alt || ''"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+
+    @if (current().caption) {
+    <div
+      class="absolute inset-x-0 bottom-0 bg-black/50 text-[--fallback-bc,#ebddbc] px-3 py-2 text-sm"
+    >
+      {{ current().caption }}
+    </div>
+    }
+  </div>
+
+  <button
+    class="nav absolute -left-14 top-1/2 btn btn-circle btn-outline text-2xl"
+    type="button"
+    (click)="prev()"
+    aria-label="Previous image"
+  >
+    <ng-icon name="boxChevronLeft"></ng-icon>
+  </button>
+  <button
+    class="nav absolute -right-14 top-1/2 btn btn-circle btn-outline text-2xl"
+    type="button"
+    (click)="next()"
+    aria-label="Next image"
+  >
+    <ng-icon name="boxChevronRight"></ng-icon>
+  </button>
+<!-- 
+  <div
+    class="dots mt-2 flex items-center justify-center gap-1.5"
+    role="tablist"
+    aria-label="Slide selectors"
+  >
+    @for (it of items; track it; let i = $index) {
+    <button
+      class="dot btn-circle size-3 border-2 border-accent-content cursor-pointer"
+      role="tab"
+      [attr.aria-selected]="i === index()"
+      [attr.aria-controls]="'slide-' + i"
+      [class.bg-accent-content]="i === index()"
+      (click)="goTo(i)"
+      [title]="it.alt"
+    ></button>
+    }
+  </div> -->
+</section>
+}

@@ -26,10 +26,19 @@ importers:
       '@angular/router':
         specifier: ^20.1.0
         version: 20.1.7(@angular/common@20.1.7(@angular/core@20.1.7(@angular/compiler@20.1.7)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.1.7(@angular/compiler@20.1.7)(rxjs@7.8.2)(zone.js@0.15.1))(@angular/platform-browser@20.1.7(@angular/common@20.1.7(@angular/core@20.1.7(@angular/compiler@20.1.7)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.1.7(@angular/compiler@20.1.7)(rxjs@7.8.2)(zone.js@0.15.1)))(rxjs@7.8.2)
+      '@ng-icons/boxicons':
+        specifier: ^32.1.0
+        version: 32.1.0
       '@ng-icons/core':
         specifier: ^32.1.0
         version: 32.1.0(@angular/common@20.1.7(@angular/core@20.1.7(@angular/compiler@20.1.7)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.1.7(@angular/compiler@20.1.7)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)
       '@ng-icons/font-awesome':
+        specifier: ^32.1.0
+        version: 32.1.0
+      '@ng-icons/phosphor-icons':
+        specifier: ^32.1.0
+        version: 32.1.0
+      '@ng-icons/simple-icons':
         specifier: ^32.1.0
         version: 32.1.0
       '@tailwindcss/postcss':
@@ -879,6 +888,9 @@ packages:
     resolution: {integrity: sha512-xJIPs+bYuc9ASBl+cvGsKbGrJmS6fAKaSZCnT0lhahT5rhA2VVy9/EcIgd2JhtEuFOJNx7UHNn/qiTPTY4nrQw==}
     engines: {node: '>= 10'}
 
+  '@ng-icons/boxicons@32.1.0':
+    resolution: {integrity: sha512-NuTEesLSqmFVDAUyagoGUOShnL+VGiSgCl1wjmJKoaPV+ElaWK9DHSkCj0WzodV0iEC9g2dPHHXBHV9XnH57rQ==}
+
   '@ng-icons/core@32.1.0':
     resolution: {integrity: sha512-QMZSJIZYFg6THQKL9cQDEf7IbBcALcM09wCBmlIf0slmozRWcNJR25T9huiXy9/15OH1APegaRW+606e9bsOIg==}
     peerDependencies:
@@ -888,6 +900,12 @@ packages:
 
   '@ng-icons/font-awesome@32.1.0':
     resolution: {integrity: sha512-+Ep3obMJwxtm3p5bOpLicb+7dR/NBRUThU33nRH6pDblKpVwvNuLJz/r+8GhtMSXou7Shr03ZbPA3yf0/KAuYQ==}
+
+  '@ng-icons/phosphor-icons@32.1.0':
+    resolution: {integrity: sha512-2/XKS6zOSCcurCt/EGe+U1Y6i4Npyawsx4iul+5S75Tj4yYo7OYafVxWnxovqY9vMZ/BMb2UbQ3O25n6WlJkuA==}
+
+  '@ng-icons/simple-icons@32.1.0':
+    resolution: {integrity: sha512-L+twNn3Lh89mUpJIQslVgDqAx8z5Zvq3o6MfMDacnSFajk2Tb1vONDknjfOh7J9th+s/9QoBy6f9RUyIabiVaA==}
 
   '@npmcli/agent@3.0.0':
     resolution: {integrity: sha512-S79NdEgDQd/NGCay6TCoVzXSj74skRZIKJcpJjC5lOq34SZzyI6MqtiiWoiVWoVrTcGjNeC4ipbh1VIHlpfF5Q==}
@@ -3775,6 +3793,10 @@ snapshots:
       '@napi-rs/nice-win32-x64-msvc': 1.1.1
     optional: true
 
+  '@ng-icons/boxicons@32.1.0':
+    dependencies:
+      tslib: 2.8.1
+
   '@ng-icons/core@32.1.0(@angular/common@20.1.7(@angular/core@20.1.7(@angular/compiler@20.1.7)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.1.7(@angular/compiler@20.1.7)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)':
     dependencies:
       '@angular/common': 20.1.7(@angular/core@20.1.7(@angular/compiler@20.1.7)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)
@@ -3783,6 +3805,14 @@ snapshots:
       tslib: 2.8.1
 
   '@ng-icons/font-awesome@32.1.0':
+    dependencies:
+      tslib: 2.8.1
+
+  '@ng-icons/phosphor-icons@32.1.0':
+    dependencies:
+      tslib: 2.8.1
+
+  '@ng-icons/simple-icons@32.1.0':
     dependencies:
       tslib: 2.8.1
 
