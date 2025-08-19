@@ -4,25 +4,24 @@
   themes: light --default;
 }
 
-
 @plugin "daisyui/theme" {
   name: "light";
   default: true;
   prefersdark: false;
   color-scheme: "light";
-  --color-base-100: #F2EEE6;
-  --color-base-200: #F2EEE6;
-  --color-base-300: #F2EEE6;
+  --color-base-100: #f2eee6;
+  --color-base-200: #f2eee6;
+  --color-base-300: #f2eee6;
   --color-base-content: oklch(21% 0.006 285.885);
   --color-primary: #fec1ba;
   --color-primary-content: oklch(21% 0.006 285.885);
-  --color-secondary: oklch(65% 0.241 354.308);
-  --color-secondary-content: oklch(94% 0.028 342.258);
+  --color-secondary: #faf174;
+  --color-secondary-content: oklch(21% 0.006 285.885);
   --color-accent: #74ccd6;
-  --color-accent-content: oklch(21% 0.006 285.885);
+  --color-accent-content: #2e2e2e;
   --color-neutral: oklch(14% 0.005 285.823);
   --color-neutral-content: oklch(92% 0.004 286.32);
-  --color-info: #3BB7A0;
+  --color-info: #3bb7a0;
   --color-info-content: oklch(29% 0.066 243.157);
   --color-success: oklch(76% 0.177 163.223);
   --color-success-content: oklch(37% 0.077 168.94);
@@ -40,10 +39,26 @@
   --noise: 0;
 }
 
-
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @font-face {
   font-family: "Cooper Hewitt";
   src: url("/fonts/cooper-hewitt/CooperHewitt-Book.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Las Vegas Fabulous";
+  src: url("/fonts/LasVegas-Fabulous.otf") format("otf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Font Diner";
+  src: url("/fonts/Fontdinerdotcom.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
   font-display: swap;

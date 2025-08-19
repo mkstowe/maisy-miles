@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { boxEtsyLogo } from '@ng-icons/boxicons/logos';
 import { NgIcon, provideIcons } from '@ng-icons/core';
-import { faBrandFacebookF } from '@ng-icons/font-awesome/brands';
-import { simpleInstagram } from '@ng-icons/simple-icons';
+import { simpleFacebook, simpleInstagram } from '@ng-icons/simple-icons';
 import { environment } from '../../../environments/environment';
 
 @Component({
@@ -10,7 +8,7 @@ import { environment } from '../../../environments/environment';
   imports: [NgIcon],
   templateUrl: './header.html',
   styleUrl: './header.scss',
-  providers: [provideIcons({ faBrandFacebookF, simpleInstagram, boxEtsyLogo })],
+  providers: [provideIcons({ simpleInstagram, simpleFacebook })],
 })
 export class Header {
   public etsyUrl = environment.etsyUrl;

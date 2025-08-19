@@ -1,19 +1,10 @@
-import {
-  Component,
-  computed,
-  HostListener,
-  Input,
-  signal,
-} from '@angular/core';
-import { NgIcon, provideIcons } from '@ng-icons/core';
-import { boxChevronLeft, boxChevronRight } from '@ng-icons/boxicons/regular';
+import { Component, computed, HostListener, signal } from '@angular/core';
 
 @Component({
   selector: 'app-gallery',
-  imports: [NgIcon],
+  imports: [],
   templateUrl: './gallery.html',
   styleUrl: './gallery.scss',
-  providers: [provideIcons({ boxChevronLeft, boxChevronRight })],
 })
 export class Gallery {
   public items: CarouselItem[] = [

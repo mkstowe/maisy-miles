@@ -1,7 +1,7 @@
 @if (items.length) {
 <div class="flex flex-wrap w-full gap-2 justify-center">
   @for (item of items; track item) {
-  <img [src]="item.src" [alt]="item.alt" class="w-64" />
+  <img [src]="item.src" [alt]="item.alt" class="w-38 sm:w-48 lg:w-64" />
   }
 </div>
 }

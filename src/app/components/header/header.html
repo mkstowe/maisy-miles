@@ -1,46 +1,60 @@
-<header class="w-full h-full">
-  <div class="flex justify-between items-center w-full h-full px-16 relative">
-    <img
-      src="/assets/logo.png"
-      alt="Maisy Miles Logo"
-      class="h-48 lg:h-64 absolute"
-    />
-    <h1 class="mx-auto">
+<header class="w-full">
+  <div
+    class="flex flex-col items-center gap-4 px-4 sm:px-8 lg:flex-row lg:items-center lg:gap-8 lg:px-16 py-4"
+  >
+    <div class="flex items-center gap-4">
+      <img
+        src="/assets/logo.png"
+        alt="Maisy Miles Logo"
+        class="h-28 sm:h-36 lg:h-48 hidden sm:block"
+      />
       <img
         src="/assets/logo-lettering.png"
         alt="Maisy Miles"
-        class="h-48 xl:h-64"
+        class="h-32 lg:h-44"
       />
-    </h1>
-    <!-- <img src="/assets/handmade-lettering.png" alt="Handmade text" class=" pl-16 h-24"> -->
+    </div>
 
-    <div
-      class="absolute flex justify-between items-center w-[280px] text-xl 2xl:ml-auto right-16"
+    <!-- Buttons: below on small, right on large -->
+    <nav
+      class="buttons order-last mt-4 flex w-3/4 min-w-38 sm:w-full justify-center gap-2 sm:gap-3 lg:order-none lg:mt-0 lg:ml-auto lg:w-auto lg:justify-end flex-col sm:flex-row lg:flex-col xl:flex-row"
     >
       <a
         [href]="etsyUrl"
-        class="btn btn-circle btn-xl btn-accent border-3 border-accent-content text-[2.6rem] w-18 h-18"
+        class="btn btn-accent border-3 border-accent-content text-xl sm:text-2xl font-medium rounded-full min-h-12 px-5"
         aria-label="Visit our Etsy shop"
         target="_blank"
         rel="noopener noreferrer"
-        ><ng-icon name="boxEtsyLogo"></ng-icon
-      ></a>
+        >ETSY SHOP</a
+      >
+
       <a
         [href]="instagramUrl"
-        class="btn btn-circle btn-xl btn-accent border-3 border-accent-content text-[1.75rem] w-18 h-18"
+        class="btn btn-accent border-3 border-accent-content text-xl sm:text-2xl font-medium rounded-full min-h-12 px-5 inline-flex items-center gap-2"
         aria-label="Visit our Instagram"
         target="_blank"
         rel="noopener noreferrer"
-        ><ng-icon name="simpleInstagram"></ng-icon
-      ></a>
+      >
+        <ng-icon
+          name="simpleInstagram"
+          class="text-[1.25rem] relative -top-[1px]"
+        ></ng-icon>
+        INSTAGRAM
+      </a>
+
       <a
         [href]="facebookUrl"
-        class="btn btn-circle btn-xl btn-accent border-3 border-accent-content text-[1.75rem] w-18 h-18"
+        class="btn btn-accent border-3 border-accent-content text-xl sm:text-2xl font-medium rounded-full min-h-12 px-5 inline-flex items-center gap-2"
         aria-label="Visit our Facebook page"
         target="_blank"
         rel="noopener noreferrer"
-        ><ng-icon name="faBrandFacebookF"></ng-icon
-      ></a>
-    </div>
+      >
+        <ng-icon
+          name="simpleFacebook"
+          class="text-[1.25rem] relative -top-[1px]"
+        ></ng-icon>
+        FACEBOOK
+      </a>
+    </nav>
   </div>
 </header>
